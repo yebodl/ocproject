@@ -7,34 +7,34 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>927382EE-587E-4AA8-8C49-02A6B5EC04F3</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>UserManagerSystem</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>295C683C10E2A09749F42CBE555A539E03343903</key>
-		<string>https://github.com/yebodl/UserManagerSystem.git</string>
+		<key>07CB8DCCE20B32F863D1895976871B95E60A4B11</key>
+		<string>https://github.com/yebodl/ocproject.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>UserManagerSystem.xcodeproj/project.xcworkspace</string>
+	<string>UserManagerSystem.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>295C683C10E2A09749F42CBE555A539E03343903</key>
+		<key>07CB8DCCE20B32F863D1895976871B95E60A4B11</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/yebodl/UserManagerSystem.git</string>
+	<string>https://github.com/yebodl/ocproject.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>295C683C10E2A09749F42CBE555A539E03343903</string>
+	<string>07CB8DCCE20B32F863D1895976871B95E60A4B11</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>295C683C10E2A09749F42CBE555A539E03343903</string>
+			<string>07CB8DCCE20B32F863D1895976871B95E60A4B11</string>
 			<key>IDESourceControlWCCName</key>
-			<string>UserManagerSystem</string>
+			<string>ocproject</string>
 		</dict>
 	</array>
 </dict>
