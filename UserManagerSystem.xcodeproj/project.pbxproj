@@ -14,6 +14,7 @@
 		BCD4E5231C1FD4C000BEAC70 /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD4E51F1C1FD4C000BEAC70 /* Menu.m */; };
 		BCD4E5241C1FD4C000BEAC70 /* UserMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD4E5211C1FD4C000BEAC70 /* UserMenu.m */; };
 		BCD4E5271C1FD4D000BEAC70 /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD4E5261C1FD4D000BEAC70 /* LoginManager.m */; };
+		BCD4E52B1C1FD63100BEAC70 /* UserConllection.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD4E52A1C1FD63100BEAC70 /* UserConllection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +44,8 @@
 		BCD4E5211C1FD4C000BEAC70 /* UserMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserMenu.m; path = views/UserMenu.m; sourceTree = "<group>"; };
 		BCD4E5251C1FD4D000BEAC70 /* LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginManager.h; path = controls/LoginManager.h; sourceTree = "<group>"; };
 		BCD4E5261C1FD4D000BEAC70 /* LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginManager.m; path = controls/LoginManager.m; sourceTree = "<group>"; };
+		BCD4E5291C1FD63100BEAC70 /* UserConllection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserConllection.h; sourceTree = "<group>"; };
+		BCD4E52A1C1FD63100BEAC70 /* UserConllection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserConllection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +78,7 @@
 		BCAFF91A1C1F5E9400D9CB61 /* UserManagerSystem */ = {
 			isa = PBXGroup;
 			children = (
+				BCD4E5281C1FD59200BEAC70 /* tools */,
 				BCD4E5151C1FD4A400BEAC70 /* controls */,
 				BCD4E5141C1FD49C00BEAC70 /* views */,
 				BCD4E5131C1FD44A00BEAC70 /* models */,
@@ -90,6 +94,8 @@
 				BCD4E5171C1FD4B300BEAC70 /* Admin.m */,
 				BCD4E5181C1FD4B300BEAC70 /* User.h */,
 				BCD4E5191C1FD4B300BEAC70 /* User.m */,
+				BCD4E5291C1FD63100BEAC70 /* UserConllection.h */,
+				BCD4E52A1C1FD63100BEAC70 /* UserConllection.m */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -114,6 +120,13 @@
 				BCD4E5261C1FD4D000BEAC70 /* LoginManager.m */,
 			);
 			name = controls;
+			sourceTree = "<group>";
+		};
+		BCD4E5281C1FD59200BEAC70 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +190,7 @@
 				BCD4E5221C1FD4C000BEAC70 /* AdminMenu.m in Sources */,
 				BCAFF91C1C1F5E9400D9CB61 /* main.m in Sources */,
 				BCD4E51A1C1FD4B300BEAC70 /* Admin.m in Sources */,
+				BCD4E52B1C1FD63100BEAC70 /* UserConllection.m in Sources */,
 				BCD4E51B1C1FD4B300BEAC70 /* User.m in Sources */,
 				BCD4E5271C1FD4D000BEAC70 /* LoginManager.m in Sources */,
 			);

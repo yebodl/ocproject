@@ -7,11 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "UserConllection.h"
 int main(int argc, const char * argv[]) {
-    @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
-    }
+    //启动前 从归档文件中获取用户信息
+    NSMutableArray * users = [UserConllection loadUsers];
+    NSLog(@"%lu",[users count]);
     return 0;
 }
