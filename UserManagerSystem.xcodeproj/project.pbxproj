@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF8073D31C21820D00144E32 /* CommonTool.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8073D21C21820D00144E32 /* CommonTool.m */; };
 		BCAFF91C1C1F5E9400D9CB61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAFF91B1C1F5E9400D9CB61 /* main.m */; };
+		BCCC2BA91C21275C00C00946 /* RegistUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCC2BA81C21275C00C00946 /* RegistUserManager.m */; };
 		BCD4E51A1C1FD4B300BEAC70 /* Admin.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD4E5171C1FD4B300BEAC70 /* Admin.m */; };
 		BCD4E51B1C1FD4B300BEAC70 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD4E5191C1FD4B300BEAC70 /* User.m */; };
 		BCD4E5221C1FD4C000BEAC70 /* AdminMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD4E51D1C1FD4C000BEAC70 /* AdminMenu.m */; };
@@ -15,6 +17,8 @@
 		BCD4E5241C1FD4C000BEAC70 /* UserMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD4E5211C1FD4C000BEAC70 /* UserMenu.m */; };
 		BCD4E5271C1FD4D000BEAC70 /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD4E5261C1FD4D000BEAC70 /* LoginManager.m */; };
 		BCD4E52B1C1FD63100BEAC70 /* UserConllection.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD4E52A1C1FD63100BEAC70 /* UserConllection.m */; };
+		BCD4E52E1C1FEA6100BEAC70 /* AdminManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD4E52D1C1FEA6100BEAC70 /* AdminManager.m */; };
+		BCD4E5311C1FEAAF00BEAC70 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD4E5301C1FEAAF00BEAC70 /* UserManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,8 +34,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AF8073D11C21820D00144E32 /* CommonTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonTool.h; path = tools/CommonTool.h; sourceTree = "<group>"; };
+		AF8073D21C21820D00144E32 /* CommonTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonTool.m; path = tools/CommonTool.m; sourceTree = "<group>"; };
 		BCAFF9181C1F5E9400D9CB61 /* UserManagerSystem */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UserManagerSystem; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCAFF91B1C1F5E9400D9CB61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BCCC2BA71C21275C00C00946 /* RegistUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegistUserManager.h; path = controls/RegistUserManager.h; sourceTree = "<group>"; };
+		BCCC2BA81C21275C00C00946 /* RegistUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegistUserManager.m; path = controls/RegistUserManager.m; sourceTree = "<group>"; };
+		BCCC2BAA1C2128DF00C00946 /* 1212users.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = 1212users.plist; path = ../../ocproject/1212users.plist; sourceTree = "<group>"; };
 		BCD4E5161C1FD4B300BEAC70 /* Admin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Admin.h; path = models/Admin.h; sourceTree = "<group>"; };
 		BCD4E5171C1FD4B300BEAC70 /* Admin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Admin.m; path = models/Admin.m; sourceTree = "<group>"; };
 		BCD4E5181C1FD4B300BEAC70 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = models/User.h; sourceTree = "<group>"; };
@@ -46,6 +55,10 @@
 		BCD4E5261C1FD4D000BEAC70 /* LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginManager.m; path = controls/LoginManager.m; sourceTree = "<group>"; };
 		BCD4E5291C1FD63100BEAC70 /* UserConllection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserConllection.h; sourceTree = "<group>"; };
 		BCD4E52A1C1FD63100BEAC70 /* UserConllection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserConllection.m; sourceTree = "<group>"; };
+		BCD4E52C1C1FEA6100BEAC70 /* AdminManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdminManager.h; path = controls/AdminManager.h; sourceTree = "<group>"; };
+		BCD4E52D1C1FEA6100BEAC70 /* AdminManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AdminManager.m; path = controls/AdminManager.m; sourceTree = "<group>"; };
+		BCD4E52F1C1FEAAF00BEAC70 /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserManager.h; path = controls/UserManager.h; sourceTree = "<group>"; };
+		BCD4E5301C1FEAAF00BEAC70 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserManager.m; path = controls/UserManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +75,7 @@
 		BCAFF90F1C1F5E9400D9CB61 = {
 			isa = PBXGroup;
 			children = (
+				BCCC2BAA1C2128DF00C00946 /* 1212users.plist */,
 				BCAFF91A1C1F5E9400D9CB61 /* UserManagerSystem */,
 				BCAFF9191C1F5E9400D9CB61 /* Products */,
 			);
@@ -118,6 +132,12 @@
 			children = (
 				BCD4E5251C1FD4D000BEAC70 /* LoginManager.h */,
 				BCD4E5261C1FD4D000BEAC70 /* LoginManager.m */,
+				BCD4E52C1C1FEA6100BEAC70 /* AdminManager.h */,
+				BCD4E52D1C1FEA6100BEAC70 /* AdminManager.m */,
+				BCD4E52F1C1FEAAF00BEAC70 /* UserManager.h */,
+				BCD4E5301C1FEAAF00BEAC70 /* UserManager.m */,
+				BCCC2BA71C21275C00C00946 /* RegistUserManager.h */,
+				BCCC2BA81C21275C00C00946 /* RegistUserManager.m */,
 			);
 			name = controls;
 			sourceTree = "<group>";
@@ -125,6 +145,8 @@
 		BCD4E5281C1FD59200BEAC70 /* tools */ = {
 			isa = PBXGroup;
 			children = (
+				AF8073D11C21820D00144E32 /* CommonTool.h */,
+				AF8073D21C21820D00144E32 /* CommonTool.m */,
 			);
 			name = tools;
 			sourceTree = "<group>";
@@ -187,11 +209,15 @@
 			files = (
 				BCD4E5231C1FD4C000BEAC70 /* Menu.m in Sources */,
 				BCD4E5241C1FD4C000BEAC70 /* UserMenu.m in Sources */,
+				BCD4E5311C1FEAAF00BEAC70 /* UserManager.m in Sources */,
 				BCD4E5221C1FD4C000BEAC70 /* AdminMenu.m in Sources */,
 				BCAFF91C1C1F5E9400D9CB61 /* main.m in Sources */,
 				BCD4E51A1C1FD4B300BEAC70 /* Admin.m in Sources */,
 				BCD4E52B1C1FD63100BEAC70 /* UserConllection.m in Sources */,
+				BCD4E52E1C1FEA6100BEAC70 /* AdminManager.m in Sources */,
+				BCCC2BA91C21275C00C00946 /* RegistUserManager.m in Sources */,
 				BCD4E51B1C1FD4B300BEAC70 /* User.m in Sources */,
+				AF8073D31C21820D00144E32 /* CommonTool.m in Sources */,
 				BCD4E5271C1FD4D000BEAC70 /* LoginManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

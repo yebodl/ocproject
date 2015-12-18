@@ -4,9 +4,9 @@
 
 @interface AdminMenu : NSObject
 
--(void) showMainMenu;
--(void) showUserManageMenu;
--(void) showFindUserMenu;
--(void) showSortUserMenu;
++(void) showMainMenu;
++(void) showUserManageMenu;
++(void) showFindUserMenu;
++(void) showSortUserMenu;
 
 @end

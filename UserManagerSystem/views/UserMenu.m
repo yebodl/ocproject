@@ -7,15 +7,18 @@
 //
 
 #import "UserMenu.h"
-
+#import "User.h"
 @implementation UserMenu
 
--(void)showUserMainMenu
++(void)showUserMainMenu:(User *)user
 {
+    NSLog(@"\n🌹欢迎 %@🌹",user.name);
     NSLog(@"1===查询个人信息");
     NSLog(@"2===修改密码");
-    NSLog(@"3===用户退出");
-    NSLog(@"4===退出系统");
+    if(user.power ==0)
+        NSLog(@"3===退出系统");
+    else
+        NSLog(@"3===返回上一层");
     NSLog(@"请选择编号：");
 }
 @end

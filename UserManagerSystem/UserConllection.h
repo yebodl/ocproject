@@ -10,8 +10,9 @@
 //
 @interface UserConllection : NSObject
 
+@property NSMutableArray * users;
 
 +(NSMutableArray *) loadUsers;
-+(void) remarkUsers:(NSMutableArray * )user;
++(bool) remarkUsers:(NSMutableArray * )user;
 
 @end

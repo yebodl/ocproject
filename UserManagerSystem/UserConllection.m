@@ -1,13 +1,8 @@
-//
-//  UserConllection.m
-//  UserManagerSystem
-//
-//  Created by qianfeng on 15/12/14.
-//  Copyright (c) 2015年 YB. All rights reserved.
-//
+/*
+ */
 
 #import "UserConllection.h"
-
+#define PATH @"/users/qianfeng/desktop/ocproject/1212users.plist"
 @implementation UserConllection
 //读取归档文件，获取所有用户信息
 +(NSMutableArray *) loadUsers
@@ -15,9 +10,10 @@
     static NSMutableArray * users = nil;
     
     if (users == nil) {
-        NSData * dd = [[NSData alloc] initWithContentsOfFile:@"/users/qianfeng/ocproject/1212users.plist"];
+        NSData * dd = [[NSData alloc] initWithContentsOfFile:PATH];
         NSKeyedUnarchiver *uarc = [[NSKeyedUnarchiver alloc] initForReadingWithData:dd];
-        users = [uarc decodeObjectForKey:@"users"];
+        NSArray * rs = [uarc decodeObjectForKey:@"users"];
+        users = [NSMutableArray arrayWithArray:rs];
     }
     return users;
 }
@@ -26,10 +22,10 @@
 {
     NSMutableData * data = [[NSMutableData alloc] init];
     NSKeyedArchiver * arc = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
-    [arc encodeObject:arr forKey:@"users"];
+    [arc encodeObject:user forKey:@"users"];
     [arc finishEncoding];
-    bool rs =[data writeToFile:@"/users/qianfeng/ocproject/1212users.plist" atomically:YES];
-    
+    bool rs =[data writeToFile:PATH atomically:YES];
+    return rs;
 }
 
 @end
