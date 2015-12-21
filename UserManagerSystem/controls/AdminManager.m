@@ -184,6 +184,36 @@
         }
     }
 }
+/**
+ * 用户名是否存在
+ */
+-(int) isExistWithName:(NSString *) name
+{
+    int nIndex = -1;
+    
+    for (int i=0; i<[_users count]; i++) {
+        User *user = _users[i];
+        if (user.name == name) {
+            nIndex = i;
+            break;
+        }
+    }
+    return nIndex;
+}
+
+-(int)isExistWithId:(int) uid
+{
+    int nIndex = -1;
+    
+    for (int i=0; i<[_users count]; i++) {
+        User *user = _users[i];
+        if (user.id == uid) {
+            nIndex = i;
+            break;
+        }
+    }
+    return nIndex;
+}
 
 /**
  *添加用户
@@ -201,6 +231,11 @@
         gets(n);
         uname = [NSString stringWithUTF8String:n];
     }
+   if( [self isExistWithName:uname]!=-1)
+   {
+       NSLog(@"😢%@用户名已存在，无法添加😢", uname);
+       return;
+   }
     
     NSLog(@"请输入密码:");
     gets(n);
@@ -244,6 +279,16 @@
         NSLog(@"\n没有此用户");
         return;
     }
+    User *user = _users[nIndex];
+    NSLog(@"你确认要删除编号：%d  用户名：%@的用户信息？",
+          user.id, user.name);
+    NSLog(@"1-是   2-否");
+    int num ;
+    scanf("%d",&num);
+    if (num==2) {
+        NSLog(@"⏪撤销删除操作⏪");
+        return;
+    }
     
     [_users removeObjectAtIndex:nIndex];
     NSLog(@"\n✅删除成功✅");
@@ -259,18 +304,6 @@
 {
     int uid = [self GetID];
     
-    NSLog(@"请输入用户名:");
-    char n[100];
-    rewind(stdin);
-    gets(n);
-    NSString * uname = [NSString stringWithUTF8String:n];
-    while ([uname length] == 0) {
-        NSLog(@"用户名不能为空");
-        NSLog(@"请输入用户名:");
-        gets(n);
-        uname = [NSString stringWithUTF8String:n];
-    }
-    
     int nIndex = -1;
     
     for (int i=0; i<[_users count]; i++) {
@@ -284,15 +317,25 @@
         NSLog(@"\n没有此用户");
         return;
     }
-    
+    NSLog(@"请输入密码:");
+    char n[100];
+    rewind(stdin);
+    gets(n);
+    NSString * pwd = [NSString stringWithUTF8String:n];
+    while ([pwd length] == 0) {
+        NSLog(@"密码不能为空");
+        NSLog(@"请输入密码:");
+        gets(n);
+        pwd = [NSString stringWithUTF8String:n];
+    }
     User *user = _users[nIndex];
-    user.name =uname;
+    user.password =pwd;
     
     [_users replaceObjectAtIndex:nIndex withObject:user];
     
     NSLog(@"\n✅修改成功✅");
     
-    //删除后归档
+    //修改后归档
     [UserConllection remarkUsers:_users];
 }
 
@@ -301,11 +344,7 @@
  */
 -(void) SelectUser
 {
-    //    int uNum = [self GetID];
-    //
-    //    User *user = _users[uNum - 1];
-    //
-    //    [self showUserInfo:user];
+    
     while (1) {
         [AdminMenu showFindUserMenu];
         int num;
@@ -322,8 +361,12 @@
             {
                 //根据ID查找用户
                 int uNum = [self GetID];
-                
-                [self showUserInfo:_users[uNum - 1]];
+                int nIndex = [self isExistWithId:uNum];
+                if (nIndex==-1) {
+                    NSLog(@"😭Id：%d用户不存在，请查确认后查询~~😭",uNum);
+                    break;
+                }
+                [self showUserInfo:_users[nIndex]];
                 break;
             }
             case 3:
@@ -342,6 +385,10 @@
                 }
                 
                 NSMutableArray *users = [self getUserByName:uname];
+                if (users.count ==0) {
+                    NSLog(@"🙈没有符合名字的用户信息~~🙈");
+                    break;
+                }
                 [self showUserInfos:users];
                 break;
             }
@@ -380,7 +427,7 @@
             continue;
         }
         
-        if ([CommonTool isPureInt:uid]) {
+        if (![CommonTool isPureInt:uid]) {
             NSLog(@"用户ID应该为数字");
             uid = @"";
             continue;
@@ -399,7 +446,7 @@
     NSMutableArray *users = [[NSMutableArray alloc] init];
     
     for (int i=0; i<[_users count]; i++) {
-        User *user = users[i];
+        User *user = _users[i];
         
         if ([user.name rangeOfString:uname].location !=NSNotFound) {
             [users addObject:user];
