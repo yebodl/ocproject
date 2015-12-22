@@ -423,12 +423,12 @@
         gets(i);
         uid = [NSString stringWithUTF8String:i];
         if ([uid length] == 0) {
-            NSLog(@"用户ID不能为空");
+            NSLog(@"🈳用户ID不能为空🈳");
             continue;
         }
         
         if (![CommonTool isPureInt:uid]) {
-            NSLog(@"用户ID应该为数字");
+            NSLog(@"🈲用户ID应该为数字🈲");
             uid = @"";
             continue;
         }
@@ -461,11 +461,12 @@
  */
 -(void) showUserInfo:(User *)user
 {
-    NSLog(@"✨信息如下：✨");
+    NSLog(@"\n✨信息如下：✨");
+    NSLog(@"编号：%d", user.id);
     NSLog(@"用户名:%@", user.name);
     NSLog(@"密码:%@", user.password);
     NSLog(@"权限: %@", user.power==1?@"管理员":@"普通用户");
-    NSLog(@"❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀");
+    NSLog(@"\n🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀");
 }
 
 /**
@@ -473,17 +474,18 @@
  */
 -(void) showUserInfos:(NSMutableArray *)users
 {
-    NSLog(@"✨信息如下：✨");
-    NSLog(@"❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀");
+    NSLog(@"\n✨信息如下：✨");
+    NSLog(@"\n🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀");
     if ([users count] == 0) {
         NSLog(@"没有相关用户");
     }else{
         for (int i=0; i<[users count]; i++) {
             User *user = users[i];
-            NSLog(@"%d",user.id);
-            NSLog(@"用户名:%@;\n密码:%@;\n权限: %@", user.name,user.password,user.power==1?@"管理员":@"普通用户");
+           
+            NSLog(@"\n❤️编号：%d\n💚用户名:%@\n💛密码:%@\n💜权限: %@",user.id, user.name,user.password,user.power==1?@"管理员":@"普通用户");
+            NSLog(@"\n------------------");
         }
     }
-    NSLog(@"❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀❀");
+    NSLog(@"\n🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀🌀");
 }
 @end

@@ -39,7 +39,7 @@ int main(int argc, const char * argv[]) {
                 exit(0);
                 break;
             default:
-                NSLog(@"编号输入错误，请重新输入");
+                NSLog(@"👿编号输入错误，请重新输入👿");
                 break;
         }
     }
